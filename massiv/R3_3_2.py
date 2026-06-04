@@ -27,15 +27,8 @@ def in_matrix(row, col, min_val=-10, max_val=10, decimal_places=2):
 
     return matrix
 
-#
-# # 1 4 11
-#
-# # .	Найти	все	максимальные	элементы	одномерного	массива
-# # (предполагается,	что	в	массиве	несколько	одинаковых	макси
-# # мальных	элементов)	за	один	проход	исходного	массива.	Сфор
-# # мировать	массив	из	их	индексов.
-# t = int(input("Введите кол-во столбцов: "))
-# matrix = in_matrix(1, t)
+# a, b = map(int, input("Введите размерность матрицы через пробел: ").split())
+# matrix = in_matrix(a, b)
 # index_lst = []
 # max_el = -1
 #
@@ -58,20 +51,20 @@ def in_matrix(row, col, min_val=-10, max_val=10, decimal_places=2):
 #         elif matrix[i][j] > max_el:
 #             max_el = matrix[i][j]
 #             index_lst.clear()
-#             index_lst.append((j+1))
+#             index_lst.append((i+1, j+1))
 #         elif matrix[i][j] == max_el:
-#             index_lst.append((j+1))
+#             index_lst.append((i+1, j+1))
 # print(f'Максимальный элемент: {max_el}')
 # print(f"\nИндексы максимальных элементов:\n{index_lst}\n{'-'*100}")
+#
+#
 
-#  4.	Задан	массив	В.	Максимальный	элемент	(или	макси
-# мальные	элементы,	если	их	несколько)	заменить	суммой	эле
-# ментов	массива,	расположенных	до	него	(до	каждого	из	них,
-# если	их	несколько).
 
 import copy
-t = int(input("Введите кол-во столбцов: "))
-matrix = in_matrix(1, t)
+
+
+a, b = map(int, input("Введите размерность матрицы через пробел: ").split())
+matrix = in_matrix(a, b)
 
 max_el = -1
 
